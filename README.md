@@ -11,10 +11,12 @@ https://keepass.info/help/v2/plugins.html
 
 ### Syntax: KeePassPipe.exe [ -t | -T | -u | -U | -p | -P ] Title
 
-The CLI tool KeePassPipe.exe searches keepass entries by title. The username (-u or -U) and password (-p or -P) of the first entry with matching title will be printed to stdout. The search is case sensitive. First matching entry will be retuned.
-In case the title is not found, empty strings will retuned. The uppercase switches will return the title, username and password like the lowercase ones, but surrounded with quotes. 
+The CLI tool KeePassPipe.exe searches KeePass entries by title. The username (-u or -U) and password (-p or -P) of the first entry with matching title will be printed to stdout. The search is case sensitive. First matching entry will be retuned.
+In case the title is not found, an empty strings will be printed. The uppercase switches will return the title, username and password like the lowercase ones, but surrounded with quotes. 
 
 Errors messages will be printed to stderr. 
+
+## Examples
 
 ![grafik](https://user-images.githubusercontent.com/49816044/56849564-7d016e00-68f6-11e9-96ac-5931549384c7.png)
 
@@ -28,8 +30,8 @@ Errors messages will be printed to stderr.
 
 set PTITLE=Sample Entry #2
 
-for /F "tokens=*" %%l in ('KeePassPipe.exe -u "%PTITLE%"') do set "PUSERNAME=%%l"
-for /F "tokens=*" %%l in ('KeePassPipe.exe -p "%PTITLE%"') do set "PPASSWORD=%%l"
+for /F "tokens=*" %%l in ('KeePassPipe.exe -U "%PTITLE%"') do set "PUSERNAME=%%~l"
+for /F "tokens=*" %%l in ('KeePassPipe.exe -P "%PTITLE%"') do set "PPASSWORD=%%~l"
 
 echo SomeApp.exe "%PUSERNAME%" "%PPASSWORD%" 
 
