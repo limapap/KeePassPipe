@@ -47,7 +47,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /Y $(TargetPath) e:\kppipe\*.*
-copy /Y $(TargetPath) C:\Users\tester\Documents\KeePass\Plugins\*.*
+copy /Y $(TargetPath) C:\dev\KeePassPipe\assets\Plugins\*.*
 </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

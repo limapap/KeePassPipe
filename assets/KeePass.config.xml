@@ -35,14 +35,17 @@
 			<Triggers />
 		</TriggerSystem>
 		<PluginCompatibility>
+			<Item>@zXFOuhg/X/kkqVXmUZbNdBQEwDBngOWIoJa1hYa9lhQ=@2.41.0.19744@1</Item>
+			<Item>@7KNWuZbj5Q+qL6hkjMowpC7TRv0EzOrvKWQYmRVxXTI=@2.41.0.19744@1</Item>
+			<Item>@HCHhjqww5qAo2IOmTcK3g3Rp85EtSLTf5wdKvfXFdjI=@2.41.0.19744@1</Item>
 			<Item>@GE2IfKPuYVa3gm989uSzmnvmj4Z98Jpdf7b9O1mljlA=@2.41.0.19744@1</Item>
 			<Item>@RF88i1t+Ra5jJIXdEaucIc5y1WrIkz7ZlITDquIcSAc=@2.41.0.19744@1</Item>
 		</PluginCompatibility>
 	</Application>
 	<Logging />
 	<MainWindow>
-		<X>1212</X>
-		<Y>286</Y>
+		<X>741</X>
+		<Y>567</Y>
 		<Width>670</Width>
 		<Height>524</Height>
 		<SplitterHorizontalFrac>0.8333</SplitterHorizontalFrac>
