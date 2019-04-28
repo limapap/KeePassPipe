@@ -12,7 +12,7 @@ The username (-u) and password (-p ) of the first entry with matching title will
 2.  In KeePass, click 'Tools' → 'Plugins' → button 'Open Folder'; KeePass now opens a folder called 'Plugins'. Move the file 'KeePassPipePlugin.dll' from the new folder into the 'Plugins' folder.
 3.  Restart KeePass in order to load the new plugin.
 
-To uninstall a plugin, delete the plugin file 'KeePassPipePlugin.dll'.
+To uninstall the plugin, delete the plugin file 'KeePassPipePlugin.dll' and restart KeePass.
 
 ## Usage
 
