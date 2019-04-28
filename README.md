@@ -38,9 +38,7 @@ echo SomeApp.exe "%PUSERNAME%" "%PPASSWORD%"
 
 >Important: Please take note that launching applications via command-line can expose your password arguments in the taskmanager. This is not related directly to using the plugin, but to its intented use in e.x. batch files. In general it's not recommendable to pass credentials as arguments on shared computers which allow multiple sessions.
 
-Querying the keepass database is only possible, if the user runs keepass and the keepass database is opened after a successful authentification.
-
-Using this plugin on a computer which is not shared, should not increase the security risc. Unauthorized remote access is prevented by allowing access to the plugin pipe for the user only, who is running KeePass and the plugin:
+Querying the keepass database with this plugin is only possible, if keepass is running and the KeePass database is opened after a successful authentification. Unauthorized remote access over the KeePassPipe plugin is prevented by allowing access to the plugin pipe for the user only, who is running KeePass and the plugin:
 ```c#
 ...
 AddAccessRule(
@@ -52,5 +50,5 @@ Hence running Keepass and the plugin as user "tester-pc\tester" and trying to ac
 
 ![grafik](https://user-images.githubusercontent.com/49816044/56861455-171df080-69a1-11e9-9eea-f539a09a2de1.png)
 
-In case a computer is infected it's only a matter of effort to gain access to the users data and keepass database. There are more common and easier approaches to do this, than using the interface offered by this plugin. Therefore it should not be adding a problem, to run this plugin on a single user computer.
+In case a computer is infected it's only a matter of effort to gain access to the users data and keepass database. There are more common and easier approaches to do this, than using the interface offered by this plugin. Therefore using this plugin on a single user computer, should not increase the security risc.
 
