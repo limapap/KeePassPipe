@@ -1,5 +1,13 @@
 # KeePassPipe
-Command line tool for querying username/password stored in KeePass.
+
+The CLI tool KeePassPipe.exe searches entries by title in an open KeePass database.
+
+### Syntax: KeePassPipe.exe [ -t | -u |  -p  ] Title
+
+The username (-u) and password (-p ) of the first entry with matching title will be printed to stdout. The search is case sensitive. First matching entry will be retuned. In case the title is not found, an empty strings will be printed. 
+
+Errors messages will be printed to stderr. 
+
 
 ## Latest Release
 https://github.com/limapap/KeePassPipe/releases/latest
@@ -9,12 +17,6 @@ https://keepass.info/help/v2/plugins.html
 
 ## Usage
 
-### Syntax: KeePassPipe.exe [ -t | -T | -u | -U | -p | -P ] Title
-
-The CLI tool KeePassPipe.exe searches KeePass entries by title. The username (-u or -U) and password (-p or -P) of the first entry with matching title will be printed to stdout. The search is case sensitive. First matching entry will be retuned.
-In case the title is not found, an empty strings will be printed. The uppercase switches will return the title, username and password like the lowercase ones, but surrounded with quotes. 
-
-Errors messages will be printed to stderr. 
 
 ## Examples
 
