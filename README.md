@@ -6,16 +6,15 @@ The CLI tool KeePassPipe.exe searches entries by title in an opened KeePass data
 
 The username (-u) and password (-p ) of the first entry with matching title will be printed to stdout. The search is case sensitive. First matching entry will be retuned. Results will be enclosed by double quote characters. Errors messages will be printed to stderr. 
 
-## Latest Release
-https://github.com/limapap/KeePassPipe/releases/latest
-
 ## Plugin Installation 
-https://keepass.info/help/v2/plugins.html
+
+1.  [Download](https://github.com/limapap/KeePassPipe/releases/latest "Lastest Release") the plugin and unpack the ZIP file to a new folder.
+2.  In KeePass, click 'Tools' → 'Plugins' → button 'Open Folder'; KeePass now opens a folder called 'Plugins'. Move the file 'KeePassPipePlugin.dll' from the new folder into the 'Plugins' folder.
+3.  Restart KeePass in order to load the new plugin.
+
+To uninstall a plugin, delete the plugin file 'KeePassPipePlugin.dll'.
 
 ## Usage
-
-
-## Examples
 
 ![grafik](https://user-images.githubusercontent.com/49816044/56849564-7d016e00-68f6-11e9-96ac-5931549384c7.png)
 
