@@ -38,7 +38,7 @@ echo SomeApp.exe "%PUSERNAME%" "%PPASSWORD%"
 
 Important: Please take note that launching applications via command-line can expose your password arguments in the taskmanager. This is not related directly to using the plugin, but to its intented use in e.x. batch files. In general it's not recommendable to pass credentials as arguments on shared computers which allow multiple sessions.
 
-Querying the keepass database is only possible, if the user runs keepass and the keepass database is open.
+Querying the keepass database is only possible, if the user runs keepass and the keepass database is opened after a successful authentification.
 
 Using this plugin on a computer which is not shared, should not increase the security risc. Unauthorized remote access is prevented by allowing access to the plugin pipe for the user only, who is running KeePass and the plugin:
 ```c#
