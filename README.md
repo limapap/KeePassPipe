@@ -2,7 +2,7 @@
 
 The CLI tool KeePassPipe.exe searches entries by title in an opened KeePass database.
 
-```batch Syntax: KeePassPipe.exe [-t|-u|-p] Title ```
+```Syntax: KeePassPipe.exe [-t|-u|-p] Title ```
 
 The username (-u) and password (-p ) of the first entry with matching title will be printed to stdout. The search is case sensitive. First matching entry will be retuned. Results will be enclosed by double quote characters. Errors messages will be printed to stderr. 
 
@@ -34,3 +34,21 @@ for /F "tokens=*" %%l in ('KeePassPipe.exe -P "%PTITLE%"') do set "PPASSWORD=%%~
 echo SomeApp.exe "%PUSERNAME%" "%PPASSWORD%" 
 
 ```
+## Security
+
+Please take note that launching applications via command-line can expose your password arguments in the taskmanager. This is not related directly to using the plugin, but to its intented use in e.x. batch files. It's not recommendable to pass credentials as arguments on shared computers which allow multiple sessions.
+
+Using this plugin on a computer which is not shared, should not increase the security risc. Unauthorized remote access is prevented by allowing access to the plugin pipe for the user only, who is running KeePass and the plugin:
+```
+...
+AddAccessRule(
+   new PipeAccessRule(WindowsIdentity.GetCurrent().Name, PipeAccessRights.FullControl, 
+   AccessControlType.Allow));
+...   
+```
+Hence running Keepass and the plugin as user "tester-pc\tester" and trying to access the plugin pipe as user "tester-pc\Alien" will not be successful:
+
+![grafik](https://user-images.githubusercontent.com/49816044/56861455-171df080-69a1-11e9-9eea-f539a09a2de1.png)
+
+In case a computer is infected it's only a matter of effort to gain access to the users data and keepass database. There are more common and easier approaches to do this, than using the interface offered by this plugin. Therefore it should not be adding a problem, to run this plugin on a single user computer.
+
