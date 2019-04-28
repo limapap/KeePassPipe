@@ -8,7 +8,7 @@
 	</Meta>
 	<Application>
 		<LastUsedFile>
-			<Path>Database.kdbx</Path>
+			<Path>database.kdbx</Path>
 			<CredProtMode>Obf</CredProtMode>
 			<CredSaveMode>NoSave</CredSaveMode>
 		</LastUsedFile>
@@ -16,7 +16,7 @@
 			<MaxItemCount>12</MaxItemCount>
 			<Items>
 				<ConnectionInfo>
-					<Path>Database.kdbx</Path>
+					<Path>database.kdbx</Path>
 					<CredProtMode>Obf</CredProtMode>
 					<CredSaveMode>NoSave</CredSaveMode>
 				</ConnectionInfo>
@@ -35,6 +35,17 @@
 			<Triggers />
 		</TriggerSystem>
 		<PluginCompatibility>
+			<Item>@UxPqiGW37Wc01taj/9vJU/rL4xXUCoFqCFKyBJdqnZc=@2.41.0.19744@1</Item>
+			<Item>@uUbyecWE1jImgvCqSCa1ZWrPL9AfYGVgMHixCWFUdg8=@2.41.0.19744@1</Item>
+			<Item>@npMZJs3KIuPikUXpXp6zO4p8toRa4GZEsUPKABoZmE0=@2.41.0.19744@1</Item>
+			<Item>@ghNwlWPnjjqdThyplm/IasP1IWDgmQ2FgEdEPp+usk4=@2.41.0.19744@1</Item>
+			<Item>@GKBJpFoanLdg7j7hCr9uR8+zGKsFsRnGxt1Qa2hC+70=@2.41.0.19744@1</Item>
+			<Item>@4FnlxhmXf+WlX2I+dScTjbIWVX9QCZQjGI06gXsW6O8=@2.41.0.19744@1</Item>
+			<Item>@F1pC/SrImVxlgem6QHyCtFGp1fjY1v1aqMwVi8Y0jZk=@2.41.0.19744@1</Item>
+			<Item>@IPoOHzNJqtNEG4uEurTyD50OF+mRacA8Xt8ZKhIRpBQ=@2.41.0.19744@1</Item>
+			<Item>@PFv+NzXbxDRAyghrx2DvRBUsRrIf3SirlUpesIRpTiU=@2.41.0.19744@1</Item>
+			<Item>@NbOwF81F3SfkUA9rQnMy9UkTvFf5XMCz+C9x8DW4vo0=@2.41.0.19744@1</Item>
+			<Item>@jvOFsivkjwmldYyII2b6QvhGTpwV+3V85WH/B+poc74=@2.41.0.19744@1</Item>
 			<Item>@zXFOuhg/X/kkqVXmUZbNdBQEwDBngOWIoJa1hYa9lhQ=@2.41.0.19744@1</Item>
 			<Item>@7KNWuZbj5Q+qL6hkjMowpC7TRv0EzOrvKWQYmRVxXTI=@2.41.0.19744@1</Item>
 			<Item>@HCHhjqww5qAo2IOmTcK3g3Rp85EtSLTf5wdKvfXFdjI=@2.41.0.19744@1</Item>
@@ -83,7 +94,9 @@
 	</MainWindow>
 	<UI>
 		<TrayIcon />
-		<Hiding />
+		<Hiding>
+			<HideInEntryWindow>false</HideInEntryWindow>
+		</Hiding>
 		<StandardFont>
 			<Family>Microsoft Sans Serif</Family>
 			<Size>8.25</Size>
@@ -142,7 +155,7 @@
 		</SearchParameters>
 		<KeySources>
 			<Association>
-				<DatabasePath>Database.kdbx</DatabasePath>
+				<DatabasePath>database.kdbx</DatabasePath>
 				<Password>true</Password>
 			</Association>
 		</KeySources>

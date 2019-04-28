@@ -41,7 +41,8 @@ namespace KeePassPipePlugin
                     using (NamedPipeClientStream cs = new NamedPipeClientStream(
                         ".", PipeName, PipeDirection.InOut, PipeOptions.None))
                     {
-                        cs.Connect(500);
+                        cs.Connect(200);
+                        Thread.Sleep(200);
                     }
                 }
                 catch { }

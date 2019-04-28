@@ -4,7 +4,6 @@ using System.IO;
 using System.IO.Pipes;
 using System.Text;
 
-
 namespace KeePassPipe
 {
     class KeePassPipe
@@ -19,9 +18,10 @@ namespace KeePassPipe
             
             try
             {
-                if ((args.Length != 2) || (! Array.Exists(Switches, element => element == args[0])))
+                if ((args.Length != 2) || (! Array.Exists(Switches, element => element.Equals(args[0]))))
                 {
-                    Console.WriteLine("Usage: KeePassPipe [-t|-u|-p] Title");
+                    
+                    Console.Error.WriteLine("Usage: KeePassPipe [-t|-u|-p] Title");
                     Environment.Exit(20010);
                     return;
                 }
@@ -30,7 +30,7 @@ namespace KeePassPipe
                 ServerPipeName = "KeePassPipe." + Process.GetCurrentProcess().SessionId;
                 NamedPipeClientStream Connection = new NamedPipeClientStream(
                     ".", ServerPipeName, PipeDirection.InOut, PipeOptions.None);
-                Connection.Connect(5000);
+                Connection.Connect(2000);
 
                 StreamReader Reader = new StreamReader(Connection, Encoding.UTF8);
                 StreamWriter Writer = new StreamWriter(Connection, Encoding.UTF8);
@@ -43,25 +43,20 @@ namespace KeePassPipe
                 for (int i = 0; i < NumberOfDataLines; i++)
                 {
                     if (Reader.EndOfStream) break;
-                    string response = Reader.ReadLine();
-                    Lines[i] = response;
+                    string Response = Reader.ReadLine();
+                    Response = '"' + Response + '"';
+                    Lines[i] = Response;
                 }
                 Connection.Dispose();
             }
             catch (Exception e)
             {
-                int code = 20014;
-                var w32ex = e as System.ComponentModel.Win32Exception;
-                if (w32ex == null)
-                    w32ex = e.InnerException as System.ComponentModel.Win32Exception;
-                if (w32ex != null)
-                    code = w32ex.ErrorCode;
-                Environment.Exit(code);
+                Console.Error.WriteLine("Error: " + e.Message);
+                Environment.Exit(20012);
                 return;
             }
-
             int LineNumber = Array.IndexOf(Switches, args[0]);
-            Console.WriteLine(Lines[LineNumber]);
+            Console.Out.WriteLine(Lines[LineNumber]);
             Environment.Exit(0);
         }
         
