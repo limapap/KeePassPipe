@@ -36,7 +36,9 @@ echo SomeApp.exe "%PUSERNAME%" "%PPASSWORD%"
 ```
 ## Security
 
->Important: Please take note that launching applications via command-line can expose your password arguments in the taskmanager. This is not related directly to using this plugin, but to its intented use in e.x. batch files. In general it's not recommendable to pass credentials as arguments on shared computers which allow multiple sessions.
+Adding software to a computer is always having the potential to increase security risks. If someone only needs to enter credentials a few times a day, I would not see a good reason to bother with automating logins and to deal with this plugin. However if your daily routine includes many logins it might be worse considering this plugin. 
+
+Important: Please note that starting a program with a password as parameter might expose the password in the taskmanager. This is not related directly to using this plugin, but to its intented use in e.x. batch files. In general it's not recommendable to pass credentials as arguments on computers which allow multiple sessions. 
 
 Querying the keepass database with this plugin is only possible, if keepass is running and the KeePass database is opened after a successful authentification. Unauthorized remote access over the KeePassPipe plugin is prevented by allowing access to the plugin pipe for the user only, who is running KeePass and the plugin:
 ```c#
@@ -50,5 +52,7 @@ Hence running Keepass and the plugin as user "tester-pc\tester" and trying to ac
 
 ![grafik](https://user-images.githubusercontent.com/49816044/56861455-171df080-69a1-11e9-9eea-f539a09a2de1.png)
 
-In case a computer is infected it's only a matter of effort to gain access to the users data and keepass database. Despite the work which was put in to hardnening KeePass, spezialized spyware attacks might succeed. There are already more common and easier approaches to do this, than using the interface offered by this plugin. Using this plugin on a single user computer, should not increase the security risc significantly. Please see the [KeePass Security](https://keepass.info/help/base/security.html) page and [KeePass 2.x Plugins](https://keepass.info/help/v2/plugins.html) for more information.
+In case a computer is infected it's only a matter of effort to gain access to the users data and keepass database. Despite the work which was put in to hardnening KeePass, spezialized spyware attacks might succeed. There are already more common and easier approaches to do this, than using the interface offered by this plugin. Using this plugin on a single user computer, should not increase the security risc significantly. 
+
+Please see the [KeePass Security](https://keepass.info/help/base/security.html) page and [KeePass 2.x Plugins](https://keepass.info/help/v2/plugins.html) for more information.
 
