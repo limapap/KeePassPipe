@@ -1,6 +1,6 @@
 # KeePassPipe
 
-The CLI tool KeePassPipe.exe searches entries by title in an opened KeePass database.
+The CLI tool KeePassPipe.exe searches password entries by title in an opened KeePass database.
 
 ```Syntax: KeePassPipe.exe [-t|-u|-p] Title ```
 
