@@ -4,7 +4,7 @@ The CLI tool KeePassPipe.exe searches entries by title in an opened KeePass data
 
 ```Syntax: KeePassPipe.exe [-t|-u|-p] Title ```
 
-The username (-u) and password (-p ) of the first entry with matching title will be printed to stdout. The search is case sensitive. First matching entry will be retuned. Results will be enclosed by double quote characters. Errors messages will be printed to stderr. 
+The username (-u) and password (-p ) of the first entry with matching title will be printed to stdout. The search is case sensitive. First matching entry will be returned. Results will be enclosed by double quote characters. Error messages will be printed to stderr. 
 
 ## Plugin Installation 
 
@@ -26,12 +26,12 @@ To uninstall the plugin, delete the plugin file 'KeePassPipePlugin.dll' and rest
 :: Get username and password from KeePass and use them as parameters
 :: for some app.
 
-set PTITLE=Sample Entry #2
+set KPTITLE=Sample Entry #2
 
-for /F "tokens=*" %%l in ('KeePassPipe.exe -U "%PTITLE%"') do set "PUSERNAME=%%~l"
-for /F "tokens=*" %%l in ('KeePassPipe.exe -P "%PTITLE%"') do set "PPASSWORD=%%~l"
+for /F "tokens=*" %%l in ('KeePassPipe.exe -U "%KPTITLE%"') do set "KPUSERNAME=%%~l"
+for /F "tokens=*" %%l in ('KeePassPipe.exe -P "%KPTITLE%"') do set "KPPASSWORD=%%~l"
 
-echo SomeApp.exe "%PUSERNAME%" "%PPASSWORD%" 
+echo SomeApp.exe "%KPUSERNAME%" "%KPPASSWORD%" 
 
 ```
 ## Security
