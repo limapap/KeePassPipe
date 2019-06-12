@@ -36,7 +36,7 @@ echo SomeApp.exe "%KPUSERNAME%" "%KPPASSWORD%"
 ```
 ## Security
 
-Adding software to a computer is always having the potential to increase security risks. If someone only needs to enter credentials a few times a day, I would not see a good reason to bother with automating logins and to deal with this plugin. However if your daily routine includes many logins it might be worse considering this plugin. 
+Adding software to a computer is always having the potential to increase security risks. If someone only needs to enter credentials a few times a day, I would not see a good reason to bother with automating logins and to deal with this plugin. However if your daily routine includes many logins it might be worth considering this plugin. 
 
 Important: Please note that starting a program with a password as parameter might expose the password in the taskmanager. This is not related directly to using this plugin, but to its intented use in e.x. batch files. In general it's not recommendable to pass credentials as arguments on computers which allow multiple sessions. 
 
