@@ -28,8 +28,8 @@ To uninstall the plugin, delete the plugin file 'KeePassPipePlugin.dll' and rest
 
 set KPTITLE=Sample Entry #2
 
-for /F "tokens=*" %%l in ('KeePassPipe.exe -U "%KPTITLE%"') do set "KPUSERNAME=%%~l"
-for /F "tokens=*" %%l in ('KeePassPipe.exe -P "%KPTITLE%"') do set "KPPASSWORD=%%~l"
+for /F "tokens=*" %%l in ('KeePassPipe.exe -u "%KPTITLE%"') do set "KPUSERNAME=%%~l"
+for /F "tokens=*" %%l in ('KeePassPipe.exe -p "%KPTITLE%"') do set "KPPASSWORD=%%~l"
 
 echo SomeApp.exe "%KPUSERNAME%" "%KPPASSWORD%" 
 
